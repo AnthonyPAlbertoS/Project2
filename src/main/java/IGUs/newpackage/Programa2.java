@@ -5,6 +5,7 @@
 package IGUs.newpackage;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -35,11 +36,11 @@ public class Programa2 extends javax.swing.JFrame {
         ColumM = new javax.swing.JTextField();
         GuardarItem = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TableResult = new javax.swing.JTable();
         ReturnMenu = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         GuardarMatriz = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        TableResult = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,31 +63,24 @@ public class Programa2 extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Elija una Opcion del Menu: ");
 
-        MenuOp.setBackground(new java.awt.Color(0, 0, 0));
+        MenuOp.setBackground(new java.awt.Color(255, 255, 255));
         MenuOp.setFont(new java.awt.Font("Segoe UI Emoji", 0, 14)); // NOI18N
-        MenuOp.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Informacion Coloboradores", "Suma Ventas Vendedor", "Promedio Ventas Vendedor", "Suma Ventas Mesuales", "Promedio Por Mes" }));
+        MenuOp.setForeground(new java.awt.Color(0, 0, 0));
+        MenuOp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Informacion Coloboradores", "Suma Ventas Vendedor", "Promedio Ventas Vendedor", "Suma Ventas Mensuales", "Promedio Por Mes" }));
 
         GuardarItem.setBackground(new java.awt.Color(153, 153, 153));
         GuardarItem.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         GuardarItem.setForeground(new java.awt.Color(0, 0, 0));
         GuardarItem.setText("Guardar Opción");
+        GuardarItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarItemActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Resultados de la Selección: ");
-
-        TableResult.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        TableResult.setForeground(new java.awt.Color(255, 255, 255));
-        TableResult.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane1.setViewportView(TableResult);
 
         ReturnMenu.setBackground(new java.awt.Color(153, 153, 153));
         ReturnMenu.setFont(new java.awt.Font("Segoe UI Historic", 1, 12)); // NOI18N
@@ -113,12 +107,29 @@ public class Programa2 extends javax.swing.JFrame {
             }
         });
 
+        TableResult.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(TableResult);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(GuardarMatriz)
+                .addGap(53, 53, 53))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,19 +150,14 @@ public class Programa2 extends javax.swing.JFrame {
                                         .addComponent(GuardarItem)
                                         .addComponent(jButton1)))
                                 .addGap(18, 18, 18)
-                                .addComponent(MenuOp, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(ReturnMenu))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(jLabel1)))
-                .addContainerGap(18, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(MenuOp, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(54, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(GuardarMatriz)
-                .addGap(53, 53, 53))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ReturnMenu)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,7 +174,7 @@ public class Programa2 extends javax.swing.JFrame {
                     .addComponent(ColumM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(2, 2, 2)
                 .addComponent(GuardarMatriz)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(MenuOp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -178,11 +184,11 @@ public class Programa2 extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(24, 24, 24)
                 .addComponent(jLabel5)
-                .addGap(3, 3, 3)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(203, 203, 203)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addComponent(ReturnMenu)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -193,7 +199,9 @@ public class Programa2 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -212,6 +220,7 @@ public class Programa2 extends javax.swing.JFrame {
     //Boton de Guardar Matriz
     private float Ventas [][]; //Matriz para guardar la cantidad de coloboradores y mes.
     private int c = 0, f= 0;
+    private Calculospro2 result; 
     private void GuardarMatrizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarMatrizActionPerformed
         String filas = FilasC.getText(); //Abstrayendo lo ingresado en TexField
         String Columnas = ColumM.getText(); 
@@ -252,6 +261,8 @@ public class Programa2 extends javax.swing.JFrame {
                 }
             } //Fin de la carga de la matriz
             
+            //Cargando mi clase calculos 
+            result = new Calculospro2 (Ventas, c,f);
             
         }catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Error: Por favor, ingrese números válidos para la Matriz.");
@@ -262,36 +273,80 @@ public class Programa2 extends javax.swing.JFrame {
     }//GEN-LAST:event_GuardarMatrizActionPerformed
 
     
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    //Configurando la Opcion de Jcombox A Travez del Boton
+    private String opcion = " "; 
+    
+    private void GuardarItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarItemActionPerformed
+        opcion = MenuOp.getSelectedItem().toString(); //Acogiendo la opcion del Jcombox
+        
+        //usando un case para la opcion del usuario. 
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+            switch (opcion) {
+                case "Informacion Coloboradores":
+                    this.MostraMatriz();
                     break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Programa2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Programa2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Programa2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Programa2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
+                case "Suma Ventas Vendedor":
+                    // Código para calcular la suma de ventas por vendedor
+                    //Llamando el metodo donde esta el resultado 
+                    result.SumVentasVendedor((DefaultTableModel)TableResult.getModel());
+                    break;
+
+                case "Promedio Ventas Vendedor":
+                    // Código para calcular el promedio de ventas por vendedor
+                    result.PromVentasVenedor((DefaultTableModel) TableResult.getModel());
+                    break;
+
+                case "Suma Ventas Mensuales":
+                    // Código para calcular la suma de ventas mensuales
+                    result.SumaVentasMensuales((DefaultTableModel) TableResult.getModel());
+                    break;
+
+                case "Promedio Por Mes":
+                    // Código para calcular el promedio de ventas por mes
+                    result.PromVentasMensuales((DefaultTableModel) TableResult.getModel());
+                    break;
+
+                default:
+                    JOptionPane.showMessageDialog(null, "Opción no válida. Por favor, seleccione una opción válida.");
+                    break;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error en el programa: " + e.getMessage());
+        }
+    }//GEN-LAST:event_GuardarItemActionPerformed
+
+    
+    public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Programa2().setVisible(true);
             }
         });
+    }
+    
+    // Vinculo para mostrar la matriz en tiempo de ejecucion en Table. 
+    public void MostraMatriz() {
+        DefaultTableModel model = (DefaultTableModel) TableResult.getModel();
+        model.setRowCount(f);
+        model.setColumnCount(c + 1); // Incrementa en 1 para incluir la columna de Vendedores
+
+        // Definir títulos de las columnas
+        String[] titulos = new String[c + 1]; // Incrementa en 1 para incluir la columna de Vendedores
+        titulos[0] = "Vendedor"; // Nombre de la primera columna
+        for (int j = 1; j <= c; j++) {
+            titulos[j] = "Mes " + j; 
+        }
+        model.setColumnIdentifiers(titulos);
+
+        // Definir filas con el nombre de vendedor
+        // Asignar nombres de vendedores en las filas
+        for (int i = 0; i < f; i++) {
+            model.setValueAt("Vendedor " + (i + 1), i, 0); // Establece el nombre del vendedor en la primera columna
+            for (int j = 0; j < c; j++) {
+                model.setValueAt(Ventas[i][j], i, j + 1); // Llena los datos de ventas en las siguientes columnas
+            }
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -309,7 +364,7 @@ public class Programa2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
