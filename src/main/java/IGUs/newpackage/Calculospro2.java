@@ -5,6 +5,7 @@
 package IGUs.newpackage;
 
 import java.text.DecimalFormat;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -98,4 +99,21 @@ public class Calculospro2 {
             model.setValueAt(dc.format(promedio),i,1);
         }
     }//Promedio de los meses. 
+    
+    private float TotalVentas(){
+        float total_ventas = 0;
+        for (int i = 0; i< f; i++){
+            
+            for (int j = 0; j < c; j++){
+                total_ventas += Ventas[i][j];
+            }
+        }//fin del for. 
+           dc.format(total_ventas);
+        return total_ventas;
+    }//fin  de la clase total ventas
+    
+    public float Total_ventas(){
+        return TotalVentas();
+    }
+    
 }
