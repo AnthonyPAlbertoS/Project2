@@ -6,7 +6,7 @@ package IGUs.newpackage;
 
 /**
  *
- * @author FLIA PEREZ
+ * @author ANTHONY PEREZ
  */
 public class Menu extends javax.swing.JFrame {
     

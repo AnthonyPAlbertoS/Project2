@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author FLIA PEREZ
+ * @author ANTHONY PEREZ
  */
 public class Programa2 extends javax.swing.JFrame {
 

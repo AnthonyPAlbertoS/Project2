@@ -8,7 +8,7 @@ import IGUs.newpackage.Menu;
 
 /**
  *
- * @author FLIA PEREZ
+ * @author ANTHONY PEREZ
  */
 public class ProyectoN2 {
 

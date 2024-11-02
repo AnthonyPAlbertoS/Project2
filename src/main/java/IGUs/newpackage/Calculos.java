@@ -9,7 +9,7 @@ import java.util.Collections;
 
 /**
  *
- * @author FLIA PEREZ
+ * @author ANTHONY PEREZ
  */
 class Calculos {
     private int[] vector;

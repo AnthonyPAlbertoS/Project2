@@ -10,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author UserA
+ * @author ANTHONY PEREZ
  */
 public class Calculospro2 {
     private float [][] Ventas;

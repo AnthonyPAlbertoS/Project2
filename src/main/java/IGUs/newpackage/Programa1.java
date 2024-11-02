@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author FLIA PEREZ
+ * @author ANTHONY PEREZ
  */
 public class Programa1 extends javax.swing.JFrame {
 
