@@ -41,10 +41,10 @@ class Calculospro3 {
     
     // Metodo para el calculo de calificacion final
     public float NotaFinal (){
-        float sumNotas= 0, promedio = 0;
+        float sumnotas= 0, promedio = 0;
         DecimalFormat dc = new DecimalFormat("##.##");
-        sumNotas = ((parcial_1 + parcial_2 + parcial_3)/3); 
-        promedio = (sumNotas + exam_sem) / 2;
+        sumnotas = (parcial_1 + parcial_2 + parcial_3); 
+        promedio = (sumnotas + exam_sem) / 2;
         dc.format(promedio);
         return promedio; 
     }
